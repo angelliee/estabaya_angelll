@@ -51,7 +51,7 @@
         <i class="fa-solid fa-user-plus mr-2"></i> Create Account
       </h2>
 
-      <form method="post" action="<?=site_url('users/store')?>" class="space-y-5">
+      <form method="post" action="<?=site_url('users/create')?>" class="space-y-5">
         <div>
           <label class="block text-pink-300 text-sm mb-1">First Name</label>
           <input type="text" name="first_name" required
