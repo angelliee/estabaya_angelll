@@ -70,7 +70,7 @@
         <div class="flex justify-center">
           <button type="submit"
                   class="bg-gradient-to-r from-pink-500 via-pink-300 to-white text-black font-semibold px-6 py-3 rounded-full shadow-md transition duration-300 hover:scale-105 hover:from-pink-600 hover:to-pink-200 flex items-center gap-2">
-            <i class="fa-solid fa-plus"></i> Create User
+            <i class="fa-solid fa-plus"></i> Add User
           </button>
         </div>
       </form>
