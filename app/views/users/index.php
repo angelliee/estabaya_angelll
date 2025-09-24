@@ -46,6 +46,19 @@
   <div class="max-w-6xl mx-auto mt-10 px-4 relative z-10">
     <div class="bg-black/50 backdrop-blur-xl shadow-2xl rounded-3xl p-6 border border-pink-400/30">
 
+    <!-- Search Bar -->
+  <form method="get" action="<?=site_url()?>" class="mb-4 flex justify-end">
+    <input 
+      type="text" 
+      name="q" 
+      value="<?=html_escape($_GET['q'] ?? '')?>" 
+      placeholder="Search student..." 
+      class="px-4 py-2 border border-gray-300 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-green-500 w-64">
+    <button type="submit" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-r-lg shadow transition-all duration-300">
+      <i class="fa fa-search"></i>
+    </button>
+  </form>
+
       <div class="flex justify-end mb-6">
         <a href="<?=site_url('users/create')?>"
            class="inline-flex items-center gap-2 bg-gradient-to-r from-pink-500 via-pink-300 to-white text-black font-semibold px-5 py-2 rounded-full shadow-md transition duration-300 hover:scale-105">
@@ -86,8 +99,16 @@
           </tbody>
         </table>
       </div>
+             <!-- Pagination -->
+<div class="mt-4 flex justify-center">
+  <div class="pagination flex space-x-2">
+      <?=$page ?? ''?>
+  </div>
+</div>
 
+</div>
+    
     </div>
   </div>
-</body>
+</body> 
 </html>
