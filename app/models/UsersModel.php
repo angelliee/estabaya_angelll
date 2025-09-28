@@ -30,10 +30,12 @@ class Usersmodel extends Model {
 
             if (!empty($q)) {
                 $query
-                      ->or_like('last_name', '%'.$q.'%')
-                      ->like('first_name', '%'.$q.'%')
-                      ->or_like('email', '%'.$q.'%');
+                    ->or_like('id', $q) // allow exact or partial match sa id
+                    ->or_like('last_name', $q)
+                    ->or_like('first_name', $q)
+                    ->or_like('email', $q);
             }
+
 
             // count total rows
             $countQuery = clone $query;
