@@ -120,6 +120,8 @@ public function dashboard()
 
 }
 
+
+
     public function logout()
     {
         $this->call->library('auth');
