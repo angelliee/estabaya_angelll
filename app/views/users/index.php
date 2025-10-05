@@ -53,7 +53,7 @@
     <div class="bg-black/50 backdrop-blur-xl shadow-2xl rounded-3xl p-6 border border-pink-400/30">
 
       <!-- Search Bar -->
-      <form method="get" action="<?=site_url()?>" class="mb-4 flex justify-end">
+      <form method="get" action="<?=site_url('/users')?>" class="mb-4 flex justify-end">
         <input 
           type="text" 
           name="q" 
@@ -113,6 +113,12 @@
         <div class="pagination flex space-x-2">
           <?=$page ?? ''?>
         </div>
+        <!-- Logout Button -->
+    <a href="<?=site_url('auth/logout');?>"
+       class="logout-btn">
+       <i class="fa-solid fa-right-from-bracket"></i> Logout
+    </a>
+
       </div>
 
     </div>

@@ -29,12 +29,14 @@ class Usersmodel extends Model {
             $query = $this->db->table($this->table);
 
             if (!empty($q)) {
-                $query
-                    ->or_like('id', $q) // allow exact or partial match sa id
+                $q = trim($q);
+                $query->like('id', $q)
                     ->or_like('last_name', $q)
                     ->or_like('first_name', $q)
                     ->or_like('email', $q);
             }
+
+
 
 
             // count total rows
